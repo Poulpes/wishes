@@ -1,15 +1,86 @@
 ---
-title: Le Wagon - Middleman
+title: Poulpe - Bonne année !
 ---
 
-<div id="home">
-  <div class="home-content">
-    <%= image_tag "logo.png", width: "200" %>
-    <p>
-      Middleman is now running!
-    </p>
-    <p class="about">
-      <%= link_to "More about this template", "about.html" %>
-    </p>
+
+
+  <div class="section bg-blue ">
+    <div>
+      <%= image_tag 'logo.svg' %>
+      <h1>2017 in review</h1>
+      <%= image_tag 'team.png' %>
+    </div>
   </div>
-</div>
+  <div class="section">
+    <div class="cards">
+      <div class="card bg-orange">
+        
+      </div>
+      <div class="card bg-grey">
+        
+      </div>
+      <div class="card bg-orange">
+        
+      </div>
+      <div class="card bg-grey">
+        
+      </div>
+      <div class="card bg-grey">
+        
+      </div>
+      <div class="card bg-orange">
+        
+      </div>
+      <div class="card bg-grey">
+        
+      </div>
+      <div class="card bg-orange">
+        
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <h2>et 3 nouvelles tentacules</h2>
+    <p>qui complètent la team</p>
+
+  </div>
+  <div class="section">
+    <div class="cards">
+      <div class="card bg-blue">
+        
+      </div>
+      <div class="card bg-grey">
+        
+      </div>
+      <div class="card bg-blue">
+        
+      </div>
+      <div class="card bg-grey">
+        
+      </div>
+      <div class="card bg-grey">
+        
+      </div>
+      <div class="card bg-blue">
+        
+      </div>
+      <div class="card bg-grey">
+        
+      </div>
+      <div class="card bg-blue">
+        
+      </div>
+    </div>
+  </div>
+  <div class="section gallery">
+    <div class="img-container">
+      <% data.images.each do |image| %>
+        <div class="img">
+          <%= image_tag image.url %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="section bg-red">
+    <%= partial 'new-year' %>
+  </div>

@@ -1,0 +1,11 @@
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.card {
+  flex: 0 0 25%;
+  height: 50vh;
+}
