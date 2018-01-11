@@ -4,71 +4,128 @@ title: Poulpe - Bonne année !
 
 
 
-  <div class="section bg-blue ">
+  <div class="section bg-blue home">
     <div>
       <%= image_tag 'logo.svg' %>
       <h1>2017 in review</h1>
       <%= image_tag 'team.png' %>
     </div>
   </div>
-  <div class="section">
+  <div class="section" id="data">
     <div class="cards">
       <div class="card bg-orange">
-        
+        <div>
+          <span class="counter-value big-number text-white" data-count="12">0</span>
+          <p class="text-white">
+            projets réalisés
+          </p>
+        </div>      
+        <%= image_tag 'rocket.svg' %>   
       </div>
       <div class="card bg-grey">
-        
+        <%= image_tag 'poulpe.svg' %>
+        <div>
+          <span class="counter-value big-number text-orange" data-count="1">0</span>
+          <p class="text-orange">
+            piñata poulpe
+          </p>
+        </div>
       </div>
       <div class="card bg-orange">
-        
+        <div>
+          <span class="counter-value big-number text-white" data-count="4">0</span>
+          <p class="text-white">
+            promos du Wagon suivi
+          </p>
+        </div>
+        <%= image_tag 'wagon.svg' %>   
       </div>
       <div class="card bg-grey">
-        
+        <%= image_tag 'ginto.svg' %>
+        <div>
+          <span class="counter-value big-number text-orange" data-count="588">0</span>
+          <p class="text-orange">
+            gin tonic
+          </p>
+        </div>
       </div>
       <div class="card bg-grey">
-        
+        <%= image_tag 'bot.svg' %> 
+        <div>
+          <span class="counter-value big-number text-orange" data-count="1">0</span>
+          <p class="text-orange">
+            chatbot
+          </p>
+        </div>
       </div>
       <div class="card bg-orange">
-        
+        <div>
+          <span class="counter-value big-number text-white" data-count="325750">0</span>
+          <p class="text-white">
+            lignes de code
+          </p>
+        </div>
+        <%= image_tag 'code.svg' %>   
       </div>
       <div class="card bg-grey">
-        
+        <%= image_tag 'party.svg' %>  
+        <div>
+          <span class="counter-value big-number text-orange" data-count="2">0</span>
+          <p class="text-orange">
+            poulpe party
+          </p>
+        </div>        
       </div>
       <div class="card bg-orange">
-        
+        <div>
+          <span class="counter-value big-number text-white" data-count="500">0</span>
+          <p class="text-white">
+            milliers d'utilisateurs atteints
+          </p>
+        </div>
+        <%= image_tag 'users.svg' %>   
       </div>
     </div>
   </div>
-  <div class="section">
-    <h2>et 3 nouvelles tentacules</h2>
-    <p>qui complètent la team</p>
-
+  <div class="section text-center team">
+    <div class="team-content">
+      <h2 class="text-orange">...et 3 nouvelles tentacules</h2>
+      <p>qui complètent la team</p>
+      <div class="persons">
+        <% data.team.each do |person| %>
+          <div class="person">
+            <%= image_tag person.url %>
+            <p><%= person.name %></p>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
-  <div class="section">
+  <div class="section projects">
     <div class="cards">
-      <div class="card bg-blue">
-        
+      <div class="card bg-blue text-white">
+        <h3>WOÔ</h3>
       </div>
-      <div class="card bg-grey">
-        
+      <div class="card bg-grey text-blue">
+        <h3>Aulo</h3>
       </div>
-      <div class="card bg-blue">
-        
+      <div class="card bg-blue text-white">
+        <h3>Sylvaine Delacourte</h3>
       </div>
-      <div class="card bg-grey">
-        
+      <div class="card bg-grey text-blue">
+        <h3>Resteo</h3>
       </div>
-      <div class="card bg-grey">
-        
+      <div class="card bg-grey text-blue">
+        <h3>Wemind</h3>
       </div>
-      <div class="card bg-blue">
-        
+      <div class="card bg-blue text-white">
+        <h3>IdentitéRH</h3>
       </div>
-      <div class="card bg-grey">
-        
+      <div class="card bg-grey text-blue">
+        <h3>YOÔ</h3>
       </div>
-      <div class="card bg-blue">
-        
+      <div class="card bg-blue text-white">
+        <h3>Heineken</h3>
       </div>
     </div>
   </div>
@@ -84,3 +141,39 @@ title: Poulpe - Bonne année !
   <div class="section bg-red">
     <%= partial 'new-year' %>
   </div>
+
+
+
+<script>
+  countUp('#data');
+  function countUp(position) {
+    var a = 0;
+    $(window).scroll(function() {
+      var oTop = $(position).offset().top - (window.innerHeight - 100);
+      if (a == 0 && $(window).scrollTop() > oTop) {
+        $('.counter-value').each(function() {
+          var $this = $(this),
+            countTo = $this.attr('data-count');
+          $({
+            countNum: $this.text()
+          }).animate({
+              countNum: countTo
+            },
+            {
+              duration: 2000,
+              easing: 'swing',
+              step: function() {
+                $this.text(Math.floor(this.countNum));
+              },
+              complete: function() {
+                $this.text(this.countNum);
+                //alert('finished');
+              }
+            });
+        });
+        a = 1;
+      }
+    });
+  }
+</script>
+

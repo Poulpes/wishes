@@ -11,6 +11,26 @@
   background-color: $light-grey;
 }
 
+.text-orange {
+  color: $orange;
+}
+.text-white {
+  color: white;
+}
+.text-blue {
+  color: $blue;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+.big-number {
+  font-family: $headers-font;
+  font-size: 90px;
+  line-height: 1;
+}
 
 .section {
   height: 100vh;
@@ -21,8 +41,4 @@
 
 .section.gallery {
   height: inherit;
-}
-
-.section.bg-red {
-  margin-top: -2px;
 }

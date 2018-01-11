@@ -1,6 +1,50 @@
+.section.home {
+  text-align: center;
+  align-items: flex-end;
+  h1 {
+    font-size: 28px;
+    margin-top: -5px;
+    color: white;
+    margin-bottom: 70px;
+  }
+  img {
+    margin-bottom: -10px;
+    position: relative;
+  }
+}
 
+.section.team {
+  background-color: white;
+  h2 {
+    font-size: 40px;
+    margin-bottom: 0;
+  }
+  p {
+    margin-top: 0;
+  }
+}
 
+.section.projects {
+  .card {
+    justify-content: center;
+  }
+}
 
+.team-content {
+  width: 70%;
+  .persons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .person {
+    flex: 0 0 160px;
+    margin: 20px 50px;
+    img {
+      width: 100%;
+    }
+  }
+}
 
 .img-container {
   display: flex;
@@ -8,8 +52,7 @@
 }
 .img {
   flex: 0 0 12.5%;
-  margin-top: -2px;
-  margin-bottom: -2px;
+  margin-bottom: -6px;
   img {
     width: 100%;
   }
