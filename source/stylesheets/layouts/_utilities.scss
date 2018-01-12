@@ -30,15 +30,18 @@
   font-family: $headers-font;
   font-size: 90px;
   line-height: 1;
+  @media (max-width: 330px) {
+    font-size: 70px;
+  }
 }
 
 .section {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .section.gallery {
-  height: inherit;
+  min-height: inherit;
 }

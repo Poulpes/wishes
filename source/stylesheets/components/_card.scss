@@ -7,7 +7,7 @@
 
 .card {
   flex: 0 0 25%;
-  height: 50vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,8 +15,135 @@
   text-align: center;
   padding: 30px 0;
   box-sizing: border-box;
+  position: relative;
   p {
     margin-top: -10px;
     margin-bottom: 0;
+  }
+  @media (max-width: $screen-md) {
+    flex: 0 0 50%;
+    // min-height: 40vh;
+  }
+  @media (max-width: 600px) {
+    flex: 0 0 100%;
+  }
+  @media (max-width: 330px) {
+    p {
+      font-size: 14px;
+      
+    }
+    img {
+      max-width: 100px;
+    }
+  }
+}
+
+.section#data {
+  .card:first-child, .card:nth-child(3), .card:nth-child(6), .card:last-child {
+    background-color: $orange;
+    color: white;
+    .color-fill {
+      fill: white;
+    }
+  }
+  .card:nth-child(2), .card:nth-child(4), .card:nth-child(5), .card:nth-child(7) {
+    background-color: $light-grey;
+    color: $orange;
+    .color-fill {
+      fill: $orange;
+    }
+  }
+  @media (max-width: $screen-md) {
+    .card:nth-child(3), .card:nth-child(6), .card:nth-child(7)  {
+      background-color: $light-grey;
+      color: $orange;
+      .color-fill {
+        fill: $orange;
+      }
+      #Le-Wagon-icon {
+        fill: white;
+      }
+    }
+    .card:nth-child(4), .card:last-child , .card:nth-child(5) {
+      background-color: $orange;
+      color: white;
+      .color-fill {
+        fill: white;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    .card:nth-child(3), .card:nth-child(5), .card:nth-child(7)  {
+      background-color: $orange;
+      color: white;
+      .color-fill {
+        fill: white;
+      }
+      #Le-Wagon-icon {
+        fill: $orange;
+      }
+    }
+    .card:nth-child(4), .card:last-child , .card:nth-child(6)  {
+      background-color: $light-grey;
+      color: $orange;
+      .color-fill {
+        fill: $orange;
+      }
+    }
+  }
+}
+
+.section.projects {
+  .card:first-child, .card:nth-child(3), .card:nth-child(6), .card:last-child {
+    background-color: $blue;
+    color: white;
+    &:hover {
+      background-color: $light-grey;
+      color: $blue;
+    }
+  }
+  .card:nth-child(2), .card:nth-child(4), .card:nth-child(5), .card:nth-child(7) {
+    background-color: $light-grey;
+    color: $blue;
+    &:hover {
+      background-color: $blue;
+      color: white;
+    }
+  }
+  @media (max-width: $screen-md) {
+    .card:nth-child(3), .card:nth-child(6), .card:nth-child(7)  {
+      background-color: $light-grey;
+      color: $blue;
+      &:hover {
+        background-color: $blue;
+        color: white;
+      }
+    }
+    .card:nth-child(4), .card:last-child , .card:nth-child(5) {
+      background-color: $blue;
+      color: white;
+      &:hover {
+        background-color: $light-grey;
+        color: $blue;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    .card:nth-child(3), .card:nth-child(5), .card:nth-child(7)  {
+      background-color: $blue;
+      color: white;
+      &:hover {
+        background-color: $light-grey;
+        color: $blue;
+      }
+    }
+    .card:nth-child(4), .card:last-child , .card:nth-child(6)  {
+      background-color: $light-grey;
+      color: $blue;
+      &:hover {
+        background-color: $blue;
+        color: white;
+      }
+    }
   }
 }

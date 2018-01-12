@@ -1,5 +1,13 @@
 .modal-button {
   cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .modal {
   bottom: 0;
@@ -38,6 +46,7 @@
   }
   @media (max-width: $screen-xs) {
     width: 90%;
+    max-height: calc(100vh - 100px);
   }
 }
 

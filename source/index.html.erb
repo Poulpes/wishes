@@ -13,77 +13,77 @@ title: Poulpe - Bonne année !
   </div>
   <div class="section" id="data">
     <div class="cards">
-      <div class="card bg-orange">
+      <div class="card">
         <div>
-          <span class="counter-value big-number text-white" data-count="12">0</span>
-          <p class="text-white">
+          <span class="counter-value big-number " data-count="12">0</span>
+          <p class="">
             projets réalisés
           </p>
         </div>      
-        <%= image_tag 'rocket.svg' %>   
+        <%= inline_svg('rocket') %>   
       </div>
-      <div class="card bg-grey">
-        <%= image_tag 'poulpe.svg' %>
+      <div class="card">
+        <%= inline_svg('poulpe') %>
         <div>
-          <span class="counter-value big-number text-orange" data-count="1">0</span>
-          <p class="text-orange">
+          <span class="counter-value big-number " data-count="1">0</span>
+          <p class="">
             piñata poulpe
           </p>
         </div>
       </div>
-      <div class="card bg-orange">
+      <div class="card">
         <div>
-          <span class="counter-value big-number text-white" data-count="4">0</span>
-          <p class="text-white">
+          <span class="counter-value big-number " data-count="4">0</span>
+          <p class="">
             promos du Wagon suivi
           </p>
         </div>
-        <%= image_tag 'wagon.svg' %>   
+        <%= inline_svg('wagon') %>   
       </div>
-      <div class="card bg-grey">
-        <%= image_tag 'ginto.svg' %>
+      <div class="card">
+        <%= inline_svg('ginto')%>
         <div>
-          <span class="counter-value big-number text-orange" data-count="588">0</span>
-          <p class="text-orange">
+          <span class="counter-value big-number " data-count="588">0</span>
+          <p class="">
             gin tonic
           </p>
         </div>
       </div>
-      <div class="card bg-grey">
-        <%= image_tag 'bot.svg' %> 
+      <div class="card">
+        <%= inline_svg('bot') %> 
         <div>
-          <span class="counter-value big-number text-orange" data-count="1">0</span>
-          <p class="text-orange">
+          <span class="counter-value big-number " data-count="1">0</span>
+          <p class="">
             chatbot
           </p>
         </div>
       </div>
-      <div class="card bg-orange">
+      <div class="card">
         <div>
-          <span class="counter-value big-number text-white" data-count="325750">0</span>
-          <p class="text-white">
+          <span class="counter-value big-number " data-count="325750">0</span>
+          <p class="">
             lignes de code
           </p>
         </div>
-        <%= image_tag 'code.svg' %>   
+        <%= inline_svg('code') %>   
       </div>
-      <div class="card bg-grey">
-        <%= image_tag 'party.svg' %>  
+      <div class="card">
+        <%= inline_svg('party')%>  
         <div>
-          <span class="counter-value big-number text-orange" data-count="2">0</span>
-          <p class="text-orange">
+          <span class="counter-value big-number " data-count="2">0</span>
+          <p class="">
             poulpe party
           </p>
         </div>        
       </div>
-      <div class="card bg-orange">
+      <div class="card">
         <div>
-          <span class="counter-value big-number text-white" data-count="500">0</span>
-          <p class="text-white">
+          <span class="counter-value big-number " data-count="500">0</span>
+          <p class="">
             milliers d'utilisateurs atteints
           </p>
         </div>
-        <%= image_tag 'users.svg' %>   
+        <%= inline_svg('users')%>   
       </div>
     </div>
   </div>
@@ -104,20 +104,22 @@ title: Poulpe - Bonne année !
   <div class="section projects">
     <div class="cards">
       <% data.projects.each do |slug, project| %>
-        <a class="modal-button card <%= project.bg_class %> <%= project.text_class %>" data-target="#modal-<%= slug %>">
-          <h3><%= project.name %></h3>
-        </a>
-        <div class="modal" id="modal-<%= slug %>">
-          <div class="modal-background"></div>
-          <div class="modal-content">
-            <div class="box">  
-              <% project.images.each do |image| %>
-                <%= image_tag image.url %>
-              <% end %>
+        <div class="card">
+          <a class="modal-button" data-target="#modal-<%= slug %>">
+            <h3><%= project.name %></h3>
+          </a>
+          <div class="modal" id="modal-<%= slug %>">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+              <div class="box">  
+                <% project.images.each do |image| %>
+                  <%= image_tag image.url %>
+                <% end %>
+              </div>
             </div>
+            <button class="modal-close"></button>
           </div>
-          <button class="modal-close"></button>
-        </div>
+          </div>
       <% end %>
     </div>
 
