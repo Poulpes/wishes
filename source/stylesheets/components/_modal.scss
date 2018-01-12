@@ -1,0 +1,97 @@
+.modal-button {
+  cursor: pointer;
+}
+.modal {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  align-items: center;
+  display: none;
+  justify-content: center;
+  overflow: hidden;
+  position: fixed;
+  z-index: 20;
+}
+.modal-background {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: rgba(10, 10, 10, 0.86);
+}
+.modal-content {
+  z-index: 40;
+  margin: 0 auto;
+  max-height: calc(100vh - 40px);
+  max-width: 640px;
+  min-width: 300px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 15px 20px;
+  overflow: scroll;
+  box-sizing: border-box; 
+  img {
+    width: 100%;
+    margin: 5px 0;
+  }
+  @media (max-width: $screen-xs) {
+    width: 90%;
+  }
+}
+
+
+
+.modal.is-active {
+  display: flex;
+}
+
+.modal-close {
+  height: 32px;
+  max-height: 32px;
+  max-width: 32px;
+  min-height: 32px;
+  min-width: 32px;
+  width: 32px;
+  -webkit-touch-callout: none;
+  user-select: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: rgba(10, 10, 10, 0.2);
+  border: none;
+  border-radius: 290486px;
+  cursor: pointer;
+  display: inline-block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 1rem;
+  outline: none;
+  position: relative;
+  vertical-align: top;
+  background: none;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  &:before, &:after {
+    background-color: white;
+    content: "";
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform-origin: center center;
+  }
+  &:before {
+    height: 2px;
+    width: 50%;
+  }
+  &:after {
+    height: 50%;
+    width: 2px;
+  }
+  &:hover, &:focus {
+    background-color: rgba(10, 10, 10, 0.3);
+  }
+}

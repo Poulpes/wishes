@@ -103,31 +103,24 @@ title: Poulpe - Bonne année !
   </div>
   <div class="section projects">
     <div class="cards">
-      <div class="card bg-blue text-white">
-        <h3>WOÔ</h3>
-      </div>
-      <div class="card bg-grey text-blue">
-        <h3>Aulo</h3>
-      </div>
-      <div class="card bg-blue text-white">
-        <h3>Sylvaine Delacourte</h3>
-      </div>
-      <div class="card bg-grey text-blue">
-        <h3>Resteo</h3>
-      </div>
-      <div class="card bg-grey text-blue">
-        <h3>Wemind</h3>
-      </div>
-      <div class="card bg-blue text-white">
-        <h3>IdentitéRH</h3>
-      </div>
-      <div class="card bg-grey text-blue">
-        <h3>YOÔ</h3>
-      </div>
-      <div class="card bg-blue text-white">
-        <h3>Heineken</h3>
-      </div>
+      <% data.projects.each do |slug, project| %>
+        <a class="modal-button card <%= project.bg_class %> <%= project.text_class %>" data-target="#modal-<%= slug %>">
+          <h3><%= project.name %></h3>
+        </a>
+        <div class="modal" id="modal-<%= slug %>">
+          <div class="modal-background"></div>
+          <div class="modal-content">
+            <div class="box">  
+              <% project.images.each do |image| %>
+                <%= image_tag image.url %>
+              <% end %>
+            </div>
+          </div>
+          <button class="modal-close"></button>
+        </div>
+      <% end %>
     </div>
+
   </div>
   <div class="section gallery">
     <div class="img-container">
