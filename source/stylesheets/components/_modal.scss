@@ -31,6 +31,7 @@
 }
 .modal-content {
   z-index: 40;
+  position: relative;
   margin: 0 auto;
   max-height: calc(100vh - 40px);
   max-width: 640px;
