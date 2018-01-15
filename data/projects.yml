@@ -1,6 +1,7 @@
 woo:
   name: WOÔ
   description: Agence d'influence digitale, site vitrine + backoffice 
+  url: http://www.woo.paris/
   images:
     - url: project/woo/woo-1.jpg
     - url: project/woo/woo-2.jpg
@@ -8,6 +9,7 @@ woo:
 aulo:
   name: Aulo
   description: Réservation de séances de mentoring avec des influencers YouTube, refonte graphique + développement frontend
+  url: https://www.aulo.io/
   images:
     - url: project/aulo/aulo-1.jpg
     - url: project/aulo/aulo-2.jpg
@@ -15,6 +17,7 @@ aulo:
 sylvaine:
   name: Sylvaine Delacourte
   description: Parfums d'exception par Sylvaine Delacourte (ancienne directrice olfactive Guerlain), refonte graphique + développement Frontend + optimisation base code
+  url: https://www.sylvaine-delacourte.com/
   images:
     - url: project/sylvaine/sylvaine-1.jpg
     - url: project/sylvaine/sylvaine-2.jpg
@@ -26,6 +29,7 @@ resteo:
 wemind:
   name: Wemind
   description: Simplifie la vie des freelances, développement web fullstack de la version bêta 
+  url: https://www.wemind.io/
   images:
     - url: project/wemind/wemind-0.jpg
     - url: project/wemind/wemind-1.jpg
@@ -40,6 +44,7 @@ irh:
 yoo:
   name: YOÔ
   description: Une plateforme innovante de micro-influence, développement fullstack, UX/UI, conseil produit
+  url: http://www.yoo.paris/
   images:
     - url: project/yoo/yoo-0.jpg
     - url: project/yoo/yoo-1.jpg
@@ -48,6 +53,7 @@ yoo:
 heineken:
   name: Heineken
   description: Jeu concours, développement web fullstack (client Rosbeef)
+  url: http://editionlimitee-eco.com/
   images:
     - url: project/heineken/heineken-1.jpg
 
