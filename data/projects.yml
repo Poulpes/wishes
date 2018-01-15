@@ -24,6 +24,7 @@ sylvaine:
 resteo:
   name: Resteo
   description: Resteo analyse les données des restaurateurs pour optimiser la gestion de leur activité et accélérer leur croissance, app de front (React) branchée sur un backend Python via une API
+  url: http://www.resteo.co/
   images:
     - url: project/resteo/resteo-1.jpg
 wemind:
