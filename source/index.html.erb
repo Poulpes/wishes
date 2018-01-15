@@ -17,7 +17,7 @@ title: Poulpe - Bonne année !
         <div>
           <span class="counter-value big-number " data-count="12">0</span>
           <p class="">
-            projets réalisés
+            projets propulsés
           </p>
         </div>      
         <%= inline_svg('rocket') %>   
@@ -33,9 +33,9 @@ title: Poulpe - Bonne année !
       </div>
       <div class="card">
         <div>
-          <span class="counter-value big-number " data-count="4">0</span>
+          <span class="counter-value big-number " data-count="160">0</span>
           <p class="">
-            promos du Wagon suivies
+            élèves du Wagon mentorés 
           </p>
         </div>
         <%= inline_svg('wagon') %>   
@@ -80,7 +80,7 @@ title: Poulpe - Bonne année !
         <div>
           <span class="counter-value big-number " data-count="500">0</span>
           <p class="">
-            milliers d'utilisateurs atteints
+            milliers d'utilisateurs touchés
           </p>
         </div>
         <%= inline_svg('users')%>   
@@ -89,7 +89,7 @@ title: Poulpe - Bonne année !
   </div>
   <div class="section text-center team">
     <div class="team-content">
-      <h2 class="text-orange">...et 3 nouvelles tentacules</h2>
+      <h2 class="text-orange">... et 3 nouvelles tentacules</h2>
       <p>qui complètent la team</p>
       <div class="persons">
         <% data.team.each do |person| %>
@@ -111,7 +111,9 @@ title: Poulpe - Bonne année !
           <div class="modal" id="modal-<%= slug %>">
             <div class="modal-background"></div>
             <div class="modal-content">
-              <div class="box">  
+              <div class="box">
+                <h4><%= project.name %></h4>
+                <p><%= project.description %></p>  
                 <% project.images.each do |image| %>
                   <%= image_tag image.url %>
                 <% end %>
