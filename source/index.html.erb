@@ -19,8 +19,8 @@ title: Poulpe - Bonne année !
           <p class="">
             projets propulsés
           </p>
-        </div>      
-        <%= inline_svg('rocket') %>   
+        </div>
+        <%= inline_svg('rocket') %>
       </div>
       <div class="card">
         <%= inline_svg('poulpe') %>
@@ -35,10 +35,10 @@ title: Poulpe - Bonne année !
         <div>
           <span class="counter-value big-number " data-count="160">0</span>
           <p class="">
-            élèves du Wagon mentorés 
+            élèves du Wagon mentorés
           </p>
         </div>
-        <%= inline_svg('wagon') %>   
+        <%= inline_svg('wagon') %>
       </div>
       <div class="card">
         <%= inline_svg('ginto')%>
@@ -50,7 +50,7 @@ title: Poulpe - Bonne année !
         </div>
       </div>
       <div class="card">
-        <%= inline_svg('bot') %> 
+        <%= inline_svg('bot') %>
         <div>
           <span class="counter-value big-number " data-count="1">0</span>
           <p class="">
@@ -65,16 +65,16 @@ title: Poulpe - Bonne année !
             lignes de code
           </p>
         </div>
-        <%= inline_svg('code') %>   
+        <%= inline_svg('code') %>
       </div>
       <div class="card">
-        <%= inline_svg('party')%>  
+        <%= inline_svg('party')%>
         <div>
           <span class="counter-value big-number " data-count="2">0</span>
           <p class="">
             poulpe party
           </p>
-        </div>        
+        </div>
       </div>
       <div class="card">
         <div>
@@ -83,7 +83,7 @@ title: Poulpe - Bonne année !
             milliers d'utilisateurs touchés
           </p>
         </div>
-        <%= inline_svg('users')%>   
+        <%= inline_svg('users')%>
       </div>
     </div>
   </div>
@@ -113,9 +113,9 @@ title: Poulpe - Bonne année !
             <div class="modal-content">
               <div class="box">
                 <h4><%= project.name %></h4>
-                <p><%= project.description %></p> 
+                <p><%= project.description %></p>
                 <% if project.url %>
-                  <%= link_to "Voir le site", project.url%> 
+                  <%= link_to "Voir le site", project.url, target: "blank"%>
                 <% end %>
                 <div class="spacer"></div>
                 <% project.images.each do |image| %>
