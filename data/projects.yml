@@ -1,6 +1,6 @@
 woo:
   name: WOÔ
-  description: Agence d'influence digitale, site vitrine + backoffice 
+  description: Agence d'influence digitale, site vitrine + backoffice
   url: http://www.woo.paris/
   images:
     - url: project/woo/woo-1.jpg
@@ -29,7 +29,7 @@ resteo:
     - url: project/resteo/resteo-1.jpg
 wemind:
   name: Wemind
-  description: Simplifie la vie des freelances, développement web fullstack de la version bêta 
+  description: Simplifie la vie des freelances, développement web fullstack de la version bêta
   url: https://www.wemind.io/
   images:
     - url: project/wemind/wemind-0.jpg
