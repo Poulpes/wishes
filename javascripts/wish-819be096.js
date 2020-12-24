@@ -1,0 +1,1 @@
+$(document).ready(function(){$(window).on("scroll",function(){var o=$(".bg-red").offset().top,n=$(".section").height()/2;$(window).scrollTop()>o-n&&$("#new-year").addClass("animate")})});
