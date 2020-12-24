@@ -4,63 +4,63 @@ title: Agence Poulpe - Bonne année !
 
 
 
-  <div class="section bg-blue home">
+  <div class="section bg-darkgreen home">
     <div>
       <%= image_tag 'logo.svg' %>
-      <h1>2017 in review</h1>
-      <%= image_tag 'team.png' %>
+      <h1>2020 in review</h1>
+      <%= image_tag 'team-2020.png' %>
     </div>
   </div>
   <div class="section" id="data">
     <div class="cards">
       <div class="card">
         <div>
-          <span class="counter-value big-number " data-count="12">0</span>
+          <span class="counter-value big-number " data-count="829">0</span>
           <p class="">
-            projets propulsés
+            heures de supports/maintenance
           </p>
         </div>
-        <%= inline_svg('rocket') %>
+        <%= inline_svg('clock') %>
       </div>
       <div class="card">
-        <%= inline_svg('poulpe') %>
+        <%= inline_svg('bug') %>
         <div>
-          <span class="counter-value big-number " data-count="1">0</span>
+          <span class="counter-value big-number " data-count="133">0</span>
           <p class="">
-            piñata poulpe
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <div>
-          <span class="counter-value big-number " data-count="160">0</span>
-          <p class="">
-            élèves du Wagon mentorés
-          </p>
-        </div>
-        <%= inline_svg('wagon') %>
-      </div>
-      <div class="card">
-        <%= inline_svg('ginto')%>
-        <div>
-          <span class="counter-value big-number " data-count="588">0</span>
-          <p class="">
-            gin tonic
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <%= inline_svg('bot') %>
-        <div>
-          <span class="counter-value big-number " data-count="1">0</span>
-          <p class="">
-            chatbot
+            bugs fixés
           </p>
         </div>
       </div>
       <div class="card">
         <div>
-          <span class="counter-value big-number " data-count="325750">0</span>
+          <span class="counter-value big-number " data-count="10">0</span>
+          <p class="">
+            jours en moyenne pour développer une nouvelle feature
+          </p>
+        </div>
+        <%= inline_svg('agenda') %>
+      </div>
+      <div class="card">
+        <%= inline_svg('rocket')%>
+        <div>
+          <span class="counter-value big-number " data-count="332">0</span>
+          <p class="">
+            Features développées
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <%= inline_svg('webcam') %>
+        <div>
+          <span class="counter-value big-number " data-count="128">0</span>
+          <p class="">
+            démo YOÔ DO réalisées
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div>
+          <span class="counter-value big-number " data-count="2325750">0</span>
           <p class="">
             lignes de code
           </p>
@@ -70,17 +70,17 @@ title: Agence Poulpe - Bonne année !
       <div class="card">
         <%= inline_svg('party')%>
         <div>
-          <span class="counter-value big-number " data-count="2">0</span>
+          <span class="counter-value big-number " data-count="3">0</span>
           <p class="">
-            poulpe party
+            nouveaux produits démarrés <br> API - EXTENSION - ANALYTICS
           </p>
         </div>
       </div>
       <div class="card">
         <div>
-          <span class="counter-value big-number " data-count="500">0</span>
+          <span class="counter-value big-number " data-count="60">0</span>
           <p class="">
-            milliers d'utilisateurs touchés
+            nouveaux collègues
           </p>
         </div>
         <%= inline_svg('users')%>
@@ -89,7 +89,7 @@ title: Agence Poulpe - Bonne année !
   </div>
   <div class="section text-center team">
     <div class="team-content">
-      <h2 class="text-orange">... et 3 nouvelles tentacules</h2>
+      <h2 class="text-darkgreen">... et 2 nouvelles tentacules</h2>
       <p>qui complètent la team</p>
       <div class="persons">
         <% data.team.each do |person| %>
@@ -101,42 +101,11 @@ title: Agence Poulpe - Bonne année !
       </div>
     </div>
   </div>
-  <div class="section projects">
-    <div class="cards">
-      <% data.projects.each do |slug, project| %>
-        <div class="card">
-          <a class="modal-button" data-target="#modal-<%= slug %>">
-            <h3><%= project.name %></h3>
-          </a>
-          <div class="modal" id="modal-<%= slug %>">
-            <div class="modal-background"></div>
-            <div class="modal-content">
-              <div class="box">
-                <h4><%= project.name %></h4>
-                <p><%= project.description %></p>
-                <% if project.url %>
-                  <%= link_to "Voir le site", project.url, target: "blank"%>
-                <% end %>
-                <div class="spacer"></div>
-                <% project.images.each do |image| %>
-                  <%= image_tag image.url %>
-                <% end %>
-              </div>
-            </div>
-            <button class="modal-close"></button>
-          </div>
-          </div>
-      <% end %>
-    </div>
-
-  </div>
-  <div class="section gallery">
-    <div class="img-container">
-      <% data.images.each do |image| %>
-        <div class="img">
-          <%= image_tag image.url %>
-        </div>
-      <% end %>
+  <div class="section bg-purple fun-fact text-center">
+    <div class="fun-facts-content">
+      <h2 class="text-darkgreen">Fun fact : Record de productivité au mois d'avril</h2>
+      <p>Le confinement n'a pas eu raison de nous 💪🏻</p>
+      <%= image_tag "gif/lockdown.gif" %>
     </div>
   </div>
   <div class="section bg-red">

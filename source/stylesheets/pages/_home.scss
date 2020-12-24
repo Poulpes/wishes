@@ -10,7 +10,7 @@
   img {
     margin-bottom: -10px;
     position: relative;
-    max-width: 90%;
+    max-width: 50%;
   }
   @media (max-width: $screen-sm) {
     h1 {
@@ -31,6 +31,9 @@
 
 .section.team {
   background-color: white;
+}
+
+.section.team, .section.fun-fact {
   h2 {
     font-size: 40px;
     margin-bottom: 0;
@@ -41,6 +44,11 @@
   }
 }
 
+.fun-facts-content {
+  img {
+    margin-top: 30px;
+  }
+}
 .section.projects {
   .card {
     justify-content: center;

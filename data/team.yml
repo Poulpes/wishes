@@ -1,10 +1,14 @@
-- name: Alice
-  url: alice.png
-- name: Thomas
-  url: thomas.png
+- name: Alain
+  url: alain.png
+- name: Aurélia
+  url: aurelia.png
+- name: Christophe
+  url: christophe.png
 - name: Karine
   url: karine.png
-- name: Romain
-  url: romain.png
+- name: Louise
+  url: louise.png
 - name: Marwan
   url: marwan.png
+- name: Thomas
+  url: thomas.png
